@@ -515,7 +515,39 @@
             </div>
         </section>
 
-        
+        <!-- Seção 7: Informações do Cliente -->
+<section id="formulario-cliente" class="section section-formulario">
+  <div class="container">
+    <div class="section-content fade-in">
+      <div class="text-content">
+        <h2 class="section-title">Informações do Cliente</h2>
+        <p class="section-text">
+          Preencha o formulário abaixo com suas informações para que possamos entrar em contato com você.
+        </p>
+      </div>
+
+      <form id="cliente-form" class="cliente-form">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div class="form-group">
+          <label for="idade">Idade:</label>
+          <input type="number" id="idade" name="idade" required min="1">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <button type="submit" class="form-button">Enviar</button>
+        <p id="mensagem" class="form-mensagem"></p>
+      </form>
+    </div>
+  </div>
+</section>
 
 
 
