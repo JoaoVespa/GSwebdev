@@ -1,3 +1,5 @@
-João Marcelo Diniz Vespa RM564038
-Gabriel Carvalho Simões da Silva RM563169
-Pedro Henrique da Silva RM566235
+João Marcelo Diniz Vespa : RM564038
+Gabriel Carvalho Simões da Silva : RM563169
+Pedro Henrique da Silva :  RM566235
+
+https://github.com/JoaoVespa/GSwebdev.git
