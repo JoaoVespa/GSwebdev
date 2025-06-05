@@ -130,6 +130,42 @@ input {
 }
 
 
+/*quiz*/
+.section-quiz {
+  background-color: #f1f9ff;
+  padding: 40px 20px;
+}
+
+.quiz-question {
+  margin-bottom: 20px;
+}
+
+.quiz-question p {
+  font-weight: bold;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0d47a1;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#quiz-result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
 
 :root {
     /* Paleta de azuis claros predominantes */
