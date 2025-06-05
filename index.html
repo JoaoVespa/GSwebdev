@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal completo de prevenção de enchentes com dados, mapas, alertas e guias de segurança para proteger sua família">
+    <title>HidroSafe - Portal Completo de Prevenção de Enchentes</title>
+    
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header com Menu Fixo Melhorado -->
+<header class="header">
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">💧</div>
+                <div class="logo-text">
+                    <h1>HidroSafe</h1>
+                    <span class="logo-subtitle">Prevenção Inteligente!</span>
+                </div>
+            </div>
+            
+    <!-- Menu Hamburger-->
+    <div class="menu-toggle" id="menu-toggle">
+        &#9776;
+    </div>
+  <nav class="menu" id="menu">
+    <ul>
+      <li><a href="#estatisticas">Problemas</a></li>
+      <li><a href="#tecnologias">Tecnologia</a></li>
+      <li><a href="#mapa-risco">Objetivo</a></li>
+      <li><a href="#preparacao">Público-alvo</a></li>
+      <li><a href="#beneficios">Benefícios</a></li>
+      <li><a href="#emergencia">Como iremos ajudar</a></li>
+    </ul>
+  </nav>
+            
+            
+            <ul class="nav-menu">
+                <li><a href="#estatisticas" class="nav-link" data-text="Problemas">Problemas</a></li>
+                <li><a href="#tecnologias" class="nav-link" data-text="Tecnologia">Tecnologia</a></li>
+                <li><a href="#mapa-risco" class="nav-link" data-text="Objetivo">Objetivo</a></li>
+                <li><a href="#preparacao" class="nav-link" data-text="Público-alvo">Público-alvo</a></li>
+                <li><a href="#beneficios" class="nav-link" data-text="Benefícios">Benefícios</a></li>
+                <li><a href="#emergencia" class="nav-link" data-text="Emergência">Como iremos ajudar</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Indicador de progresso de scroll -->
+    <div class="scroll-progress"></div>
+</header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-background">
+        <div class="hero-particles"></div>
+        <div class="hero-waves">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="badge-icon">🚨</span>
+                    <span>Sistema de Alerta Inteligente</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-highlight">Proteja</span> sua família das
+                    <span class="title-gradient">enchentes</span>
+                </h1>
+                <p class="hero-description">
+                    Tecnologia de monitoramento que salva vidas com <br>
+                    alertas antecipados e orienta quem precisa!
+                    
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2000">0</span>
+                        <span class="stat-label">Vidas Salvas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="500">0</span>
+                        <span class="stat-label">Milhões Economizados</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="94">0</span>
+                        <span class="stat-label">% de Precisão</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="hero-visual">
+                <div class="hero-phone">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="app-interface">
+                                <div class="app-header">
+                                    <div class="app-title">HidroSafe</div>
+                                    <div class="app-status online">Online</div>
+                                </div>
+                                <div class="alert-card">
+                                    <div class="alert-icon">⚠️</div>
+                                    <div class="alert-content">
+                                        <h4>Alerta Preventivo</h4>
+                                        <p>Chuva intensa prevista em 4h</p>
+                                        <div class="alert-progress">
+                                            <div class="progress-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="weather-info">
+                                    <div class="weather-item">
+                                        <span>🌧️</span>
+                                        <span>45mm/h</span>
+                                    </div>
+                                    <div class="weather-item">
+                                        <span>📍</span>
+                                        <span>São Paulo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-elements">
+                    <div class="floating-card card-1">
+                        <span class="card-icon">🛡️</span>
+                        <span class="card-text">Proteção 24h</span>
+                    </div>
+                    <div class="floating-card card-2">
+                        <span class="card-icon">⚡</span>
+                        <span class="card-text">Alerta Instantâneo</span>
+                    </div>
+                    <div class="floating-card card-3">
+                        <span class="card-icon">📊</span>
+                        <span class="card-text">Dados Precisos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+
+        <!-- Seção 1: Problemas -->
+        <section id="estatisticas" class="section section-estatisticas">
+            <div class="container">
+                <div class="section-content fade-in">
+                    <div class="full-width-content">
+                        <h2 class="section-title center">Problemas</h2>
+                        
+                        <div class="charts-grid">
+                            
+                            
+                            <div class="chart-container">
+                                <h3>Destruição de moradias e infraestrutura</h3>
+                                <img src="imgs/destruicao enchente.png">
+                                <p class="chart-description">A força das águas pode destruir casas, ruas, pontes e redes de serviços públicos, deixando comunidades inteiras desabrigadas e isoladas.</p>
+                            </div>
+                            
+                            <div class="chart-container">
+                                <h3>Prejuízos econômicos</h3>
+                                <img src="imgs/prejuizo enchente.png">
+                                <p class="chart-description">Comércios, indústrias e agricultura sofrem perdas financeiras significativas devido a danos e interrupções.</p>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: tecnologias -->
+        <section id="tecnologias" class="section section-tecnologias">
+            <div class="container">
+                <div class="section-content reverse fade-in">
+                    <div class="text-content">
+                        <h2 class="section-title">Sistema Inteligente de Monitoramento</h2>
+                        <p class="section-text">
+                            Nossa tecnologia combina sensores IoT, inteligência artificial preditiva e análise meteorológica em tempo real para detectar riscos de enchentes.
+                        </p>
+                        
+                        
+                        <div class="tech-specs">
+                            <h3>Especificações Técnicas:</h3>
+                            <div class="specs-grid">
+                                <div class="spec-item">
+                                    <span class="spec-icon">📡</span>
+                                    <div class="spec-details">
+                                        <h4>Sensores IoT</h4>
+                                        <p>500+ sensores distribuídos</p>
+                                        <p>Precisão: ±2mm</p>
+                                        <p>Atualização: 30 segundos</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="spec-item">
+                                    <span class="spec-icon">🤖</span>
+                                    <div class="spec-details">
+                                        <h4>IA Preditiva</h4>
+                                        <p>Machine Learning avançado</p>
+                                        <p>Precisão: 94% de acerto</p>
+                                        <p>Antecedência: 6 horas</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="spec-item">
+                                    <span class="spec-icon">🛰️</span>
+                                    <div class="spec-details">
+                                        <h4>Dados Satelitais</h4>
+                                        <p>Imagens em tempo real</p>
+                                        <p>Resolução: 10m</p>
+                                        <p>Cobertura: 100% território</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <span class="tech-icon">📱</span>
+                                <span class="tech-name">App Mobile</span>
+                                <span class="tech-desc">Alertas push instantâneos</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-icon">🌐</span>
+                                <span class="tech-name">Portal Web</span>
+                                <span class="tech-desc">Dashboard completo</span>
+                            </div>
+                
+                        </div>
+                    </div>
+                    <div class="image-content">
+                        <div class="tech-diagram">
+                            <h4>Como Funciona o Sistema</h4>
+                            <div class="diagram-steps">
+                                <div class="step">1. Coleta de Dados</div>
+                                <div class="arrow">→</div>
+                                <div class="step">2. Análise IA</div>
+                                <div class="arrow">→</div>
+                                <div class="step">3. Previsão</div>
+                                <div class="arrow">→</div>
+                                <div class="step">4. Alerta</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: Objetivos e mapa -->
+        <section id="mapa-risco" class="section section-mapa">
+            <div class="container">
+                <div class="section-content fade-in">
+                    <div class="full-width-content">
+                        <h2 class="section-title center"></h2>
+                        
+                        <div class="map-container">
+                            
+                            
+                            <div class="region-details" id="regionDetails">
+                                <h2>Objetivo da Página:</h2>
+                                <p>Esta página tem como objetivo informar, conscientizar e promover soluções práticas para o problema das enchentes no Brasil.</p> <br>
+                                <p>Buscamos oferecer análises, dados atualizados e propostas de ações comunitárias que ajudem a reduzir os riscos e danos causados pelas enchentes.</p>
+                            </div>
+                        </div>
+
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Seção 4: Público-alvo -->
+        <section id="preparacao" class="section section-preparacao">
+            <div class="container">
+                <div class="section-content fade-in">
+                    <div class="full-width-content">
+                        <h2 class="section-title center">Público-alvo</h2>
+                        
+                        <div class="preparation-guide">
+                    
+                            
+                            <div class="guide-section">
+                                <p>Nosso público-alvo são aqueles que estão precisando de ajuda nas enchentes, por exemplo uma família.</p>
+                                <p>Segue então um PLANO FAMILIAR DE EMERGÊNCIA.</p>
+                                <h3>👨‍👩‍👧‍👦 Plano Familiar de Emergência</h3>
+                                <div class="family-plan">
+                                    <div class="plan-step">
+                                        <h4>1. Rotas de Evacuação</h4>
+                                        <ul>
+                                            <li>Identifique 2 rotas diferentes para sair de casa</li>
+                                            <li>Conheça o caminho para abrigos públicos</li>
+                                            <li>Pratique as rotas com toda a família</li>
+                                            <li>Considere limitações de mobilidade</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="plan-step">
+                                        <h4>2. Pontos de Encontro</h4>
+                                        <ul>
+                                            <li>Local próximo à casa (vizinho, praça)</li>
+                                            <li>Local fora do bairro (escola, igreja)</li>
+                                            <li>Contato fora da cidade</li>
+                                            <li>Todos devem memorizar os endereços</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="plan-step">
+                                        <h4>3. Comunicação</h4>
+                                        <ul>
+                                            <li>Lista de contatos de emergência</li>
+                                            <li>Números da Defesa Civil e Bombeiros</li>
+                                            <li>Contato de parentes em outras cidades</li>
+                                            <li>Redes sociais para comunicação</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 5: Benefícios do Sistema -->
+        <section id="beneficios" class="section section-beneficios">
+            <div class="container">
+                <div class="section-content fade-in">
+                    <div class="text-content">
+                        <h2 class="section-title">Benefícios Comprovados do Sistema HidroSafe</h2>
+                        <p class="section-text">
+                            O sistema da Hidrosafe pode salvar diversas vidas e evitar caros prejuízos em danos materiais.
+                        </p>
+                        <p class="section-text">
+                            Nossa tecnologia oferece alertas com 6 horas de antecedência, tempo suficiente para evacuação segura e proteção de bens.
+                        </p>
+
+                        
+                        </div>
+
+                        <div class="benefits-grid">
+                            <div class="benefit-card">
+                                <div class="benefit-icon">⏰</div>
+                                <h4>Alerta Antecipado</h4>
+                                <p>6 horas de antecedência</p>
+                                <ul class="benefit-details">
+                                    <li>Tempo para evacuação segura</li>
+                                    <li>Proteção de bens materiais</li>
+                                </ul>
+                            </div>
+                            <div class="benefit-card">
+                                <div class="benefit-icon">📱</div>
+                                <h4>Múltiplos Canais</h4>
+                                <p>Alertas garantidos</p>
+                                <ul class="benefit-details">
+                                    <li>Push notifications</li>
+                                    <li>SMS e chamadas</li>
+                                </ul>
+                            </div>
+                            <div class="benefit-card">
+                                <div class="benefit-icon">💰</div>
+                                <h4>Economia Comprovada</h4>
+                                <p>80% menos prejuízos</p>
+                                <ul class="benefit-details">
+                                    <li>Redução de danos materiais</li>
+                                    <li>Menor custo de recuperação</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 6: Ajuda do dia a dia -->
+        <section id="emergencia" class="section section-emergencia">
+            <div class="container">
+                <div class="section-content fade-in">
+                    <div class="full-width-content">
+                        <h2 class="section-title center">Como iremos ajudar</h2>
+                        
+                        <div class="emergency-procedures">
+                            <div class="procedure-timeline">
+                                <p>Com linha do tempo da Emergência, regras de segurança e contatos de emergência</p> <br>
+                                <h3>Linha do Tempo da Emergência</h3>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker">6h</div>
+                                        <div class="timeline-content">
+                                            <h4>Alerta Preventivo</h4>
+                                            <p>Prepare kit de emergência e monitore atualizações</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker">3h</div>
+                                        <div class="timeline-content">
+                                            <h4>Alerta de Atenção</h4>
+                                            <p>Mova objetos valiosos, desligue energia se necessário</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker">1h</div>
+                                        <div class="timeline-content">
+                                            <h4>Alerta Crítico</h4>
+                                            <p>Prepare-se para evacuação imediata</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-marker">0h</div>
+                                        <div class="timeline-content">
+                                            <h4>Evacuação</h4>
+                                            <p>Saia imediatamente para local seguro</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="safety-rules">
+                                <h3>Regras de Segurança Fundamentais</h3>
+                                <div class="rules-grid">
+                                    <div class="rule-card danger">
+                                        <h4>❌ NUNCA FAÇA</h4>
+                                        <ul>
+                                            <li>Atravesse águas correntes</li>
+                                            <li>Dirija em ruas alagadas</li>
+                                            <li>Toque em fios elétricos</li>
+                                            <li>Beba água contaminada</li>
+                                            <li>Retorne antes da liberação</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="rule-card safe">
+                                        <h4>✅ SEMPRE FAÇA</h4>
+                                        <ul>
+                                            <li>Siga rotas de evacuação</li>
+                                            <li>Mantenha-se em locais altos</li>
+                                            <li>Ouça autoridades locais</li>
+                                            <li>Ajude quem mais necessita</li>
+                                            <li>Mantenha a calma e paciência</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="emergency-contacts">
+                                <h3>Contatos de Emergência</h3>
+                                <div class="contacts-grid">
+                                    <div class="contact-card">
+                                        <span class="contact-icon">🚒</span>
+                                        <h4>Bombeiros</h4>
+                                        <p class="contact-number">193</p>
+                                        <p>Emergências e resgates</p>
+                                    </div>
+                                    
+                                    <div class="contact-card">
+                                        <span class="contact-icon">🛡️</span>
+                                        <h4>Defesa Civil</h4>
+                                        <p class="contact-number">199</p>
+                                        <p>Alertas e evacuações</p>
+                                    </div>
+                                    
+                                    <div class="contact-card">
+                                        <span class="contact-icon">🚓</span>
+                                        <h4>Polícia Militar</h4>
+                                        <p class="contact-number">190</p>
+                                        <p>Segurança e ordem</p>
+                                    </div>
+                                    
+                                    <div class="contact-card">
+                                        <span class="contact-icon">🏥</span>
+                                        <h4>SAMU</h4>
+                                        <p class="contact-number">192</p>
+                                        <p>Emergências médicas</p>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>💧 HidroSafe</h3>
+                    <p>Não é sorte. É prevenção inteligente.</p>
+                    <div class="footer-stats">
+                        
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#estatisticas">Problemas</a></li>
+                        <li><a href="#mapa-risco">Nosso objetivo</a></li>
+                        <li><a href="#tecnologias">Nossa Tecnologia</a></li>
+                        <li><a href="#preparacao">Público-alvo</a></li>
+                        <li><a href="#beneficios">Benefícios</a></li>
+                        <li><a href="#emergencia">Como iremos ajudar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergência 24h</h4>
+                    <ul class="footer-links">
+                        <li><a href="tel:193">🚒 Bombeiros: 193</a></li>
+                        <li><a href="tel:199">🛡️ Defesa Civil: 199</a></li>
+                        <li><a href="tel:190">🚓 Polícia: 190</a></li>
+                        <li><a href="tel:192">🏥 SAMU: 192</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Cobertura Nacional</h4>
+                    <ul class="footer-links">
+                        <li>🏙️ Grande São Paulo</li>
+                        <li>🏖️ Rio de Janeiro</li>
+                        <li>🌿 Região Sul</li>
+                        <li>⛰️ Minas Gerais</li>
+                        <li>🌴 Bahia e Nordeste</li>
+                        <li>🌳 Centro-Oeste</li>
+                    </ul>
+                    <div class="coverage-note">
+                        <p><small>Expansão contínua para novas regiões. Consulte disponibilidade em sua cidade.</small></p>
+                    </div>
+                </div>
+            </div>
+            
+    </footer>
+<script src="js/script.js"></script>
+    
+</body>
+</html>
