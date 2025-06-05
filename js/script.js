@@ -37,3 +37,8 @@ document.getElementById('cliente-form').addEventListener('submit', function (e) 
   mensagem.textContent = 'Formulário enviado com sucesso!';
   mensagem.style.color = 'green';
 });
+
+
+
+
+
