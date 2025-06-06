@@ -1,78 +1,100 @@
-//menu hamburguer dispositivo movel
-const toggle = document.getElementById('menu-toggle');
-const menu = document.getElementById('menu');
+// Theme Switcher
+const themeToggle = document.getElementById("theme-toggle")
+const themeDropdown = document.getElementById("theme-dropdown")
+const themeOptions = document.querySelectorAll(".theme-option")
+const themeIcon = document.querySelector(".theme-icon")
 
-toggle.addEventListener('click', () => {
-  menu.classList.toggle('show');
-});
+// Temas disponíveis
+const themes = {
+  light: { name: "Claro", icon: "☀️" },
+  dark: { name: "Escuro", icon: "🌙" },
+  purple: { name: "Roxo", icon: "💜" },
+}
 
-//formulario
-document.getElementById('cliente-form').addEventListener('submit', function (e) {
-  e.preventDefault();
+// Carregar tema salvo ou usar padrão
+let currentTheme = localStorage.getItem("hidrosafe-theme") || "light"
+applyTheme(currentTheme)
 
-  const nome = document.getElementById('nome').value.trim();
-  const idade = parseInt(document.getElementById('idade').value);
-  const email = document.getElementById('email').value.trim();
-  const mensagem = document.getElementById('mensagem');
+// Toggle dropdown
+themeToggle.addEventListener("click", (e) => {
+  e.stopPropagation()
+  themeDropdown.classList.toggle("show")
+})
 
-  if (!nome || !idade || !email) {
-    mensagem.textContent = 'Preencha todos os campos.';
-    mensagem.style.color = 'red';
-    return;
+// Fechar dropdown ao clicar fora
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".theme-switcher")) {
+    themeDropdown.classList.remove("show")
   }
+})
 
-  if (idade <= 0 || isNaN(idade)) {
-    mensagem.textContent = 'Idade deve ser maior que zero.';
-    mensagem.style.color = 'red';
-    return;
-  }
-
-  const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  if (!emailValido) {
-    mensagem.textContent = 'Email inválido.';
-    mensagem.style.color = 'red';
-    return;
-  }
-
-  mensagem.textContent = 'Formulário enviado com sucesso!';
-  mensagem.style.color = 'green';
-});
-
-//quiz
-document.getElementById('quiz-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const respostasCorretas = {
-    q1: 'b',
-    q2: 'c',
-    q3: 'b',
-    q4: 'b',
-    q5: 'b',
-    q6: 'b',
-    q7: 'b',
-    q8: 'c',
-    q9: 'b',
-    q10: 'b'
-  };
-
-  let pontuacao = 0;
-
-  for (let key in respostasCorretas) {
-    const respostaUsuario = document.querySelector(`input[name="${key}"]:checked`);
-    if (respostaUsuario && respostaUsuario.value === respostasCorretas[key]) {
-      pontuacao++;
+// Selecionar tema
+themeOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    const selectedTheme = option.dataset.theme
+    if (selectedTheme !== currentTheme) {
+      currentTheme = selectedTheme
+      applyTheme(currentTheme)
+      localStorage.setItem("hidrosafe-theme", currentTheme)
     }
+    themeDropdown.classList.remove("show")
+  })
+})
+
+// Aplicar tema
+function applyTheme(theme) {
+  // Remover tema anterior
+  document.documentElement.removeAttribute("data-theme")
+
+  // Aplicar novo tema
+  if (theme !== "light") {
+    document.documentElement.setAttribute("data-theme", theme)
   }
 
-  const resultado = document.getElementById('quiz-result');
-  resultado.textContent = `Você acertou ${pontuacao} de 10 perguntas.`;
+  // Atualizar ícone
+  themeIcon.textContent = themes[theme].icon
 
-  if (pontuacao < 6) {
-    resultado.style.color = 'red';
-  } else {
-    resultado.style.color = 'green';
+  // Atualizar opções ativas
+  themeOptions.forEach((option) => {
+    option.classList.remove("active")
+    if (option.dataset.theme === theme) {
+      option.classList.add("active")
+    }
+  })
+
+  // Animação suave de transição
+  document.body.style.transition = "all 0.3s ease-in-out"
+  setTimeout(() => {
+    document.body.style.transition = ""
+  }, 300)
+}
+
+// Atalho de teclado para alternar temas (Ctrl + T)
+document.addEventListener("keydown", (e) => {
+  if (e.ctrlKey && e.key === "t") {
+    e.preventDefault()
+    const themeKeys = Object.keys(themes)
+    const currentIndex = themeKeys.indexOf(currentTheme)
+    const nextIndex = (currentIndex + 1) % themeKeys.length
+    const nextTheme = themeKeys[nextIndex]
+
+    currentTheme = nextTheme
+    applyTheme(currentTheme)
+    localStorage.setItem("hidrosafe-theme", currentTheme)
   }
-});
+})
 
+// Detectar preferência do sistema (opcional)
+function detectSystemTheme() {
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dark"
+  }
+  return "light"
+}
 
-
+// Aplicar tema do sistema se não houver preferência salva
+if (!localStorage.getItem("hidrosafe-theme")) {
+  const systemTheme = detectSystemTheme()
+  currentTheme = systemTheme
+  applyTheme(currentTheme)
+}
