@@ -626,3 +626,27 @@ document.addEventListener("DOMContentLoaded", () => {
     input.addEventListener("change", updateProgress)
   })
 })
+
+
+ //slideshow
+const images = document.querySelectorAll('.carousel-image');
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+
+let current = 0;
+
+function showImage(index) {
+  images.forEach((img, i) => {
+    img.classList.toggle('active', i === index);
+  });
+}
+
+nextBtn.addEventListener('click', () => {
+  current = (current + 1) % images.length;
+  showImage(current);
+});
+
+prevBtn.addEventListener('click', () => {
+  current = (current - 1 + images.length) % images.length;
+  showImage(current);
+});

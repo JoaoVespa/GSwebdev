@@ -5205,3 +5205,85 @@ body {
 [data-theme="purple"] .form-button {
   background: linear-gradient(135deg, var(--primary-light-blue), var(--secondary-light-blue));
 }
+
+/*slideshow*/
+.section-carrossel {
+  background-color: #eaf4fc;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-image {
+  min-width: 100%;
+  display: none;
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none; /* permite que os botões não bloqueiem clique na imagem */
+}
+
+.carousel-buttons button {
+  pointer-events: all; /* habilita clique nos botões */
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-buttons button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.carousel-image {
+  position: relative;
+  min-width: 100%;
+  display: none;
+  text-align: center;
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+.carousel-image figcaption {
+  font-size: 16px;
+  color: #222;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 8px 12px;
+  margin-top: 5px;
+  border-radius: 4px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
