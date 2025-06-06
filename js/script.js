@@ -172,7 +172,7 @@ function handleResize() {
 
 window.addEventListener("resize", handleResize)
 
-// ===== THEME SWITCHER (código existente mantido) =====
+// ===== MUDAR DE TEMA =====
 const themeToggle = document.getElementById("theme-toggle")
 const themeDropdown = document.getElementById("theme-dropdown")
 const themeOptions = document.querySelectorAll(".theme-option")
@@ -267,7 +267,7 @@ if (!localStorage.getItem("hidrosafe-theme")) {
   applyTheme(currentTheme)
 }
 
-// ===== FORMULÁRIO E QUIZ (código existente mantido) =====
+// ===== FORMULÁRIO E QUIZ  =====
 document.getElementById("cliente-form").addEventListener("submit", (e) => {
   e.preventDefault()
 
@@ -334,7 +334,7 @@ document.getElementById("quiz-form").addEventListener("submit", (e) => {
   }
 })
 
-// Formulário de Cliente Melhorado - VERSÃO CORRIGIDA
+// Formulário de Cliente Melhorado
 document.addEventListener("DOMContentLoaded", () => {
   const clienteForm = document.getElementById("cliente-form")
   const nomeInput = document.getElementById("nome")
@@ -509,8 +509,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Inicializa a validação
   checkFormValidity()
 })
-
-// Substitua a seção do quiz por esta versão melhorada:
 
 // Quiz melhorado com progresso e feedback visual
 document.getElementById("quiz-form").addEventListener("submit", (e) => {
