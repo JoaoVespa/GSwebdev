@@ -24,6 +24,7 @@
 <header class="header">
     <nav class="nav">
         <div class="nav-container">
+            <!-- Logo -->
             <div class="logo">
                 <div class="logo-icon">💧</div>
                 <div class="logo-text">
@@ -32,44 +33,7 @@
                 </div>
             </div>
             
-    <!-- Menu Hamburger-->
-    <div class="menu-toggle" id="menu-toggle">
-        &#9776;
-    </div>
-  <!-- Botão de Alternância de Tema -->
-<div class="theme-switcher">
-    <button id="theme-toggle" class="theme-toggle-btn" title="Alternar tema">
-        <span class="theme-icon">🌙</span>
-    </button>
-    <div class="theme-dropdown" id="theme-dropdown">
-        <div class="theme-option" data-theme="light">
-            <span class="theme-preview light-preview"></span>
-            <span>Claro</span>
-        </div>
-        <div class="theme-option" data-theme="dark">
-            <span class="theme-preview dark-preview"></span>
-            <span>Escuro</span>
-        </div>
-        <div class="theme-option" data-theme="purple">
-            <span class="theme-preview purple-preview"></span>
-            <span>Roxo</span>
-        </div>
-    </div>
-</div>
-  <nav class="menu" id="menu">
-    <ul>
-      <li><a href="#estatisticas">Problemas</a></li>
-      <li><a href="#tecnologias">Tecnologia</a></li>
-      <li><a href="#mapa-risco">Objetivo</a></li>
-      <li><a href="#preparacao">Público-alvo</a></li>
-      <li><a href="#beneficios">Benefícios</a></li>
-      <li><a href="#emergencia">Como iremos ajudar</a></li>
-      <li><a href="#formulario-cliente">Formulário</a></li>
-      <li><a href="#Quiz">Quiz</a></li>
-    </ul>
-  </nav>
-             
-
+            <!-- Menu Desktop -->
             <ul class="nav-menu">
                 <li><a href="#estatisticas" class="nav-link" data-text="Problemas">Problemas</a></li>
                 <li><a href="#tecnologias" class="nav-link" data-text="Tecnologia">Tecnologia</a></li>
@@ -77,14 +41,62 @@
                 <li><a href="#preparacao" class="nav-link" data-text="Público-alvo">Público-alvo</a></li>
                 <li><a href="#beneficios" class="nav-link" data-text="Benefícios">Benefícios</a></li>
                 <li><a href="#emergencia" class="nav-link" data-text="Emergência">Como iremos ajudar</a></li>
-                <li><a href="#formulario-cliente" class="nav-link" data-text="Formulario">Formulário</a></li>
+                <li><a href="#formulario-cliente" class="nav-link" data-text="Formulário">Formulário</a></li>
                 <li><a href="#Quiz" class="nav-link" data-text="Quiz">Quiz</a></li>
             </ul>
+            
+            <!-- Área direita com Theme Switcher e Menu Toggle -->
+            <div class="nav-right">
+                <!-- Theme Switcher -->
+                <div class="theme-switcher">
+                    <button id="theme-toggle" class="theme-toggle-btn" title="Alternar tema" aria-label="Alternar tema">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <div class="theme-dropdown" id="theme-dropdown">
+                        <div class="theme-option" data-theme="light">
+                            <span class="theme-preview light-preview"></span>
+                            <span>Claro</span>
+                        </div>
+                        <div class="theme-option" data-theme="dark">
+                            <span class="theme-preview dark-preview"></span>
+                            <span>Escuro</span>
+                        </div>
+                        <div class="theme-option" data-theme="purple">
+                            <span class="theme-preview purple-preview"></span>
+                            <span>Roxo</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu Hambúrguer -->
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
         
-    
+        <!-- Menu Mobile -->
+        <nav class="menu" id="menu" role="navigation" aria-label="Menu principal">
+            <ul>
+                <li><a href="#estatisticas">🔍 Problemas</a></li>
+                <li><a href="#tecnologias">⚙️ Tecnologia</a></li>
+                <li><a href="#mapa-risco">🎯 Objetivo</a></li>
+                <li><a href="#preparacao">👥 Público-alvo</a></li>
+                <li><a href="#beneficios">✨ Benefícios</a></li>
+                <li><a href="#emergencia">🚨 Como iremos ajudar</a></li>
+                <li><a href="#formulario-cliente">📝 Formulário</a></li>
+                <li><a href="#Quiz">🧠 Quiz</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Overlay para menu mobile -->
+        <div class="menu-overlay" id="menu-overlay"></div>
+    </nav>
     
     <!-- Indicador de progresso de scroll -->
-    <div class="scroll-progress"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
 </header>
 
     <!-- Main Content -->
