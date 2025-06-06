@@ -20,21 +20,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header com Menu Fixo Melhorado -->
-<header class="header">
-    <nav class="nav">
-        <div class="nav-container">
-            <!-- Logo -->
-            <div class="logo">
-                <div class="logo-icon">💧</div>
+    <header class="header" id="header">
+        <nav class="nav">
+          <div class="nav-container">
+            <!-- Layout Desktop -->
+            <div class="nav-desktop">
+              <div class="logo">
+                <span class="logo-icon">💧</span>
                 <div class="logo-text">
-                    <h1>HidroSafe</h1>
-                    <span class="logo-subtitle">Prevenção Inteligente!</span>
+                  <h1>HidroSafe</h1>
+                  <span class="logo-subtitle">Sistema de Alerta Inteligente</span>
                 </div>
-            </div>
-            
-            <!-- Menu Desktop -->
-            <ul class="nav-menu">
+              </div>
+      
+              <ul class="nav-menu" id="nav-menu">
                 <li><a href="#estatisticas" class="nav-link" data-text="Problemas">Problemas</a></li>
                 <li><a href="#tecnologias" class="nav-link" data-text="Tecnologia">Tecnologia</a></li>
                 <li><a href="#mapa-risco" class="nav-link" data-text="Objetivo">Objetivo</a></li>
@@ -43,60 +42,90 @@
                 <li><a href="#emergencia" class="nav-link" data-text="Emergência">Como iremos ajudar</a></li>
                 <li><a href="#formulario-cliente" class="nav-link" data-text="Formulário">Formulário</a></li>
                 <li><a href="#Quiz" class="nav-link" data-text="Quiz">Quiz</a></li>
-            </ul>
-            
-            <!-- Área direita com Theme Switcher e Menu Toggle -->
-            <div class="nav-right">
-                <!-- Theme Switcher -->
-                <div class="theme-switcher">
-                    <button id="theme-toggle" class="theme-toggle-btn" title="Alternar tema" aria-label="Alternar tema">
-                        <span class="theme-icon">🌙</span>
-                    </button>
-                    <div class="theme-dropdown" id="theme-dropdown">
-                        <div class="theme-option" data-theme="light">
-                            <span class="theme-preview light-preview"></span>
-                            <span>Claro</span>
-                        </div>
-                        <div class="theme-option" data-theme="dark">
-                            <span class="theme-preview dark-preview"></span>
-                            <span>Escuro</span>
-                        </div>
-                        <div class="theme-option" data-theme="purple">
-                            <span class="theme-preview purple-preview"></span>
-                            <span>Roxo</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Menu Hambúrguer -->
-                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+              </ul>
+      
+              <div class="theme-switcher">
+                <button class="theme-toggle-btn" id="theme-toggle">
+                  <span class="theme-icon">🌙</span>
                 </button>
+                <div class="theme-dropdown" id="theme-dropdown">
+                  <div class="theme-option" data-theme="light">
+                    <div class="theme-preview light-preview"></div>
+                    <span>Claro</span>
+                  </div>
+                  <div class="theme-option" data-theme="dark">
+                    <div class="theme-preview dark-preview"></div>
+                    <span>Escuro</span>
+                  </div>
+                  <div class="theme-option" data-theme="purple">
+                    <div class="theme-preview purple-preview"></div>
+                    <span>Roxo</span>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
         
-        <!-- Menu Mobile -->
-        <nav class="menu" id="menu" role="navigation" aria-label="Menu principal">
-            <ul>
-                <li><a href="#estatisticas">🔍 Problemas</a></li>
-                <li><a href="#tecnologias">⚙️ Tecnologia</a></li>
-                <li><a href="#mapa-risco">🎯 Objetivo</a></li>
-                <li><a href="#preparacao">👥 Público-alvo</a></li>
-                <li><a href="#beneficios">✨ Benefícios</a></li>
-                <li><a href="#emergencia">🚨 Como iremos ajudar</a></li>
-                <li><a href="#formulario-cliente">📝 Formulário</a></li>
-                <li><a href="#Quiz">🧠 Quiz</a></li>
-            </ul>
-        </nav>
+            <!-- Layout Mobile -->
+            <div class="nav-mobile">
+                <div class="mobile-nav-row">
+                  <div class="theme-switcher">
+                    <button class="theme-toggle-btn" id="theme-toggle-mobile">
+                      <span class="theme-icon">🌙</span>
+                    </button>
+                    <div class="theme-dropdown" id="theme-dropdown-mobile">
+                      <div class="theme-option" data-theme="light">
+                        <div class="theme-preview light-preview"></div>
+                        <span>Claro</span>
+                      </div>
+                      <div class="theme-option" data-theme="dark">
+                        <div class="theme-preview dark-preview"></div>
+                        <span>Escuro</span>
+                      </div>
+                      <div class="theme-option" data-theme="purple">
+                        <div class="theme-preview purple-preview"></div>
+                        <span>Roxo</span>
+                      </div>
+                    </div>
+                  </div>
         
-        <!-- Overlay para menu mobile -->
-        <div class="menu-overlay" id="menu-overlay"></div>
+                  <div class="logo">
+                    <span class="logo-icon">💧</span>
+                    <div class="logo-text">
+                      <h1>HidroSafe</h1>
+                      <span class="logo-subtitle">Sistema de Alerta Inteligente</span>
+                    </div>
+                  </div>
+        
+                  <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>  
+
+    <!-- Menu Mobile -->
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="#estatisticas" class="nav-link" data-text="Problemas">Problemas</a></li>
+            <li><a href="#tecnologias" class="nav-link" data-text="Tecnologia">Tecnologia</a></li>
+            <li><a href="#mapa-risco" class="nav-link" data-text="Objetivo">Objetivo</a></li>
+            <li><a href="#preparacao" class="nav-link" data-text="Público-alvo">Público-alvo</a></li>
+            <li><a href="#beneficios" class="nav-link" data-text="Benefícios">Benefícios</a></li>
+            <li><a href="#emergencia" class="nav-link" data-text="Emergência">Como iremos ajudar</a></li>
+            <li><a href="#formulario-cliente" class="nav-link" data-text="Formulário">Formulário</a></li>
+            <li><a href="#Quiz" class="nav-link" data-text="Quiz">Quiz</a></li>
+        </ul>
+      </div>
+  
+      
+      <!-- Overlay para menu mobile -->
+      <div class="menu-overlay" id="menu-overlay"></div>
+  
+      <!-- Indicador de progresso de scroll -->
+      <div class="scroll-progress" id="scroll-progress"></div>
     </nav>
-    
-    <!-- Indicador de progresso de scroll -->
-    <div class="scroll-progress" id="scroll-progress"></div>
 </header>
 
     <!-- Main Content -->
@@ -553,125 +582,341 @@
 <section id="formulario-cliente" class="section section-formulario">
   <div class="container">
     <div class="section-content fade-in">
-      <div class="text-content">
-        <h2 class="section-title">Informações do Cliente</h2>
-        <p class="section-text">
-          Preencha o formulário abaixo com suas informações para que possamos entrar em contato com você.
-        </p>
+      <div class="form-section">
+        <div class="form-header">
+          <h2 class="form-title">Informações do Cliente</h2>
+          <p class="form-description">
+            Preencha o formulário abaixo para receber alertas personalizados e informações sobre prevenção de enchentes na sua região.
+          </p>
+        </div>
+
+        <form id="cliente-form" class="cliente-form">
+          <div class="form-grid">
+            <div class="input-group" id="nome-group">
+              <label for="nome">Nome completo</label>
+              <input 
+                type="text" 
+                id="nome" 
+                name="nome" 
+                placeholder="Digite seu nome completo"
+                autocomplete="name"
+                required
+              >
+              <span class="input-icon">👤</span>
+              <div class="error-message">Por favor, digite seu nome completo</div>
+            </div>
+
+            <div class="input-group" id="idade-group">
+              <label for="idade">Idade</label>
+              <input 
+                type="number" 
+                id="idade" 
+                name="idade" 
+                placeholder="Digite sua idade"
+                min="1" 
+                max="120"
+                required
+              >
+              <span class="input-icon">📅</span>
+              <div class="error-message">Por favor, digite uma idade válida (1-120)</div>
+            </div>
+
+            <div class="input-group" id="email-group">
+              <label for="email">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="Digite seu melhor email"
+                autocomplete="email"
+                required
+              >
+              <span class="input-icon">✉️</span>
+              <div class="error-message">Por favor, digite um email válido</div>
+            </div>
+
+            <div class="input-group" id="telefone-group">
+              <label for="telefone">Telefone (opcional)</label>
+              <input 
+                type="tel" 
+                id="telefone" 
+                name="telefone" 
+                placeholder="(00) 00000-0000"
+                autocomplete="tel"
+              >
+              <span class="input-icon">📱</span>
+            </div>
+          </div>
+
+          <button type="submit" class="form-button" id="submit-button" disabled>
+            <span class="button-text">
+              <span>Enviar</span>
+              <span class="button-icon">→</span>
+            </span>
+          </button>
+
+          <div class="form-message" id="mensagem"></div>
+
+          <div class="form-footer">
+            <p>Seus dados estão seguros e não serão compartilhados com terceiros.</p>
+            <p>Ao enviar, você concorda com nossa <a href="#">Política de Privacidade</a>.</p>
+          </div>
+        </form>
       </div>
-
-      <form id="cliente-form" class="cliente-form">
-        <div class="form-group">
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required>
-        </div>
-
-        <div class="form-group">
-          <label for="idade">Idade:</label>
-          <input type="number" id="idade" name="idade" required min="1">
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-
-        <button type="submit" class="form-button">Enviar</button>
-        <p id="mensagem" class="form-mensagem"></p>
-      </form>
     </div>
   </div>
 </section>
 
-
-
+<!-- Substitua a seção do Quiz por esta versão melhorada -->
 
 <!-- Seção 8: Quiz sobre Enchentes -->
 <section id="Quiz" class="section section-quiz">
-  <div class="container">
-    <div class="section-content">
-      <h2 class="section-title">Quiz: Você está preparado para uma enchente?</h2>
-      <form id="quiz-form">
-        <div class="quiz-question">
-          <p>1. O que é uma enchente?</p>
-          <input type="radio" name="q1" value="a"> Aumento normal do nível do rio<br>
-          <input type="radio" name="q1" value="b"> Acúmulo excessivo de água que transborda<br>
-          <input type="radio" name="q1" value="c"> Falta de chuvas<br>
+    <div class="container">
+      <div class="quiz-container">
+        <div class="quiz-header">
+          <h2 class="quiz-title">🧠 Quiz: Você está preparado para uma enchente?</h2>
+          <p class="quiz-subtitle">
+            Teste seus conhecimentos sobre prevenção e segurança em enchentes. 
+            Este quiz vai ajudar você a identificar pontos importantes para sua proteção.
+          </p>
+          <div class="quiz-progress">
+            <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
+          </div>
         </div>
-
-        <div class="quiz-question">
-          <p>2. Qual item é essencial em um kit de emergência para enchentes?</p>
-          <input type="radio" name="q2" value="a"> Guarda-chuva<br>
-          <input type="radio" name="q2" value="b"> Corda de segurança<br>
-          <input type="radio" name="q2" value="c"> Lanterna com pilhas<br>
-        </div>
-
-        <div class="quiz-question">
-          <p>3. O que fazer ao ouvir um alerta de enchente?</p>
-          <input type="radio" name="q3" value="a"> Ignorar<br>
-          <input type="radio" name="q3" value="b"> Buscar abrigo imediatamente<br>
-          <input type="radio" name="q3" value="c"> Ir para o rio observar<br>
-        </div>
-
-        <div class="quiz-question">
-          <p>4. Qual destes locais é mais seguro durante uma enchente?</p>
-          <input type="radio" name="q4" value="a"> Porão da casa<br>
-          <input type="radio" name="q4" value="b"> Telhado ou lugar alto<br>
-          <input type="radio" name="q4" value="c"> Garagem subterrânea<br>
-        </div>
-
-        <div class="quiz-question">
-          <p>5. Enchentes podem causar:</p>
-          <input type="radio" name="q5" value="a"> Benefícios à saúde<br>
-          <input type="radio" name="q5" value="b"> Poluição e doenças<br>
-          <input type="radio" name="q5" value="c"> Apenas diversão<br>
-        </div>
-
-        <div class="quiz-question">
-          <p>6. Qual atitude é correta ao dirigir em área alagada?</p>
-          <input type="radio" name="q6" value="a"> Acelerar<br>
-          <input type="radio" name="q6" value="b"> Evitar passar<br>
-          <input type="radio" name="q6" value="c"> Passar devagar<br>
-        </div>
-
-        <div class="quiz-question">
-          <p>7. O lixo jogado nas ruas pode:</p>
-          <input type="radio" name="q7" value="a"> Ajudar no escoamento<br>
-          <input type="radio" name="q7" value="b"> Obstruir bueiros e causar enchentes<br>
-          <input type="radio" name="q7" value="c"> Não tem impacto<br>
-        </div>
-
-        <div class="quiz-question">
-          <p>8. Após a enchente, é seguro usar a água acumulada?</p>
-          <input type="radio" name="q8" value="a"> Sim<br>
-          <input type="radio" name="q8" value="b"> Sim, se for fervida<br>
-          <input type="radio" name="q8" value="c"> Não, pode estar contaminada<br>
-        </div>
-
-        <div class="quiz-question">
-          <p>9. Qual é a primeira coisa a se fazer ao chegar em casa após uma enchente?</p>
-          <input type="radio" name="q9" value="a"> Ligar os eletrodomésticos<br>
-          <input type="radio" name="q9" value="b"> Verificar estrutura e risco elétrico<br>
-          <input type="radio" name="q9" value="c"> Ligar o chuveiro<br>
-        </div>
-
-        <div class="quiz-question">
-          <p>10. Como se manter informado durante uma enchente?</p>
-          <input type="radio" name="q10" value="a"> Redes sociais apenas<br>
-          <input type="radio" name="q10" value="b"> TV e rádio oficiais<br>
-          <input type="radio" name="q10" value="c"> Não é necessário se informar<br>
-        </div>
-
-        <button type="submit">Enviar Respostas</button>
-      </form>
-      <div id="quiz-result"></div>
+  
+        <form id="quiz-form" class="quiz-form">
+          <div class="quiz-question">
+            <div class="quiz-question-number">1</div>
+            <p class="quiz-question-text">O que é uma enchente?</p>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q1" value="a">
+                <span class="radio-custom"></span>
+                <span class="option-text">Aumento normal do nível do rio</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q1" value="b">
+                <span class="radio-custom"></span>
+                <span class="option-text">Acúmulo excessivo de água que transborda</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q1" value="c">
+                <span class="radio-custom"></span>
+                <span class="option-text">Falta de chuvas</span>
+              </label>
+            </div>
+          </div>
+  
+          <div class="quiz-question">
+            <div class="quiz-question-number">2</div>
+            <p class="quiz-question-text">Qual item é essencial em um kit de emergência para enchentes?</p>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q2" value="a">
+                <span class="radio-custom"></span>
+                <span class="option-text">Guarda-chuva</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q2" value="b">
+                <span class="radio-custom"></span>
+                <span class="option-text">Corda de segurança</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q2" value="c">
+                <span class="radio-custom"></span>
+                <span class="option-text">Lanterna com pilhas</span>
+              </label>
+            </div>
+          </div>
+  
+          <div class="quiz-question">
+            <div class="quiz-question-number">3</div>
+            <p class="quiz-question-text">O que fazer ao ouvir um alerta de enchente?</p>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q3" value="a">
+                <span class="radio-custom"></span>
+                <span class="option-text">Ignorar</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q3" value="b">
+                <span class="radio-custom"></span>
+                <span class="option-text">Buscar abrigo imediatamente</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q3" value="c">
+                <span class="radio-custom"></span>
+                <span class="option-text">Ir para o rio observar</span>
+              </label>
+            </div>
+          </div>
+  
+          <div class="quiz-question">
+            <div class="quiz-question-number">4</div>
+            <p class="quiz-question-text">Qual destes locais é mais seguro durante uma enchente?</p>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q4" value="a">
+                <span class="radio-custom"></span>
+                <span class="option-text">Porão da casa</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q4" value="b">
+                <span class="radio-custom"></span>
+                <span class="option-text">Telhado ou lugar alto</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q4" value="c">
+                <span class="radio-custom"></span>
+                <span class="option-text">Garagem subterrânea</span>
+              </label>
+            </div>
+          </div>
+  
+          <div class="quiz-question">
+            <div class="quiz-question-number">5</div>
+            <p class="quiz-question-text">Enchentes podem causar:</p>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q5" value="a">
+                <span class="radio-custom"></span>
+                <span class="option-text">Benefícios à saúde</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q5" value="b">
+                <span class="radio-custom"></span>
+                <span class="option-text">Poluição e doenças</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q5" value="c">
+                <span class="radio-custom"></span>
+                <span class="option-text">Apenas diversão</span>
+              </label>
+            </div>
+          </div>
+  
+          <div class="quiz-question">
+            <div class="quiz-question-number">6</div>
+            <p class="quiz-question-text">Qual atitude é correta ao dirigir em área alagada?</p>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q6" value="a">
+                <span class="radio-custom"></span>
+                <span class="option-text">Acelerar</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q6" value="b">
+                <span class="radio-custom"></span>
+                <span class="option-text">Evitar passar</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q6" value="c">
+                <span class="radio-custom"></span>
+                <span class="option-text">Passar devagar</span>
+              </label>
+            </div>
+          </div>
+  
+          <div class="quiz-question">
+            <div class="quiz-question-number">7</div>
+            <p class="quiz-question-text">O lixo jogado nas ruas pode:</p>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q7" value="a">
+                <span class="radio-custom"></span>
+                <span class="option-text">Ajudar no escoamento</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q7" value="b">
+                <span class="radio-custom"></span>
+                <span class="option-text">Obstruir bueiros e causar enchentes</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q7" value="c">
+                <span class="radio-custom"></span>
+                <span class="option-text">Não tem impacto</span>
+              </label>
+            </div>
+          </div>
+  
+          <div class="quiz-question">
+            <div class="quiz-question-number">8</div>
+            <p class="quiz-question-text">Após a enchente, é seguro usar a água acumulada?</p>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q8" value="a">
+                <span class="radio-custom"></span>
+                <span class="option-text">Sim</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q8" value="b">
+                <span class="radio-custom"></span>
+                <span class="option-text">Sim, se for fervida</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q8" value="c">
+                <span class="radio-custom"></span>
+                <span class="option-text">Não, pode estar contaminada</span>
+              </label>
+            </div>
+          </div>
+  
+          <div class="quiz-question">
+            <div class="quiz-question-number">9</div>
+            <p class="quiz-question-text">Qual é a primeira coisa a se fazer ao chegar em casa após uma enchente?</p>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q9" value="a">
+                <span class="radio-custom"></span>
+                <span class="option-text">Ligar os eletrodomésticos</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q9" value="b">
+                <span class="radio-custom"></span>
+                <span class="option-text">Verificar estrutura e risco elétrico</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q9" value="c">
+                <span class="radio-custom"></span>
+                <span class="option-text">Ligar o chuveiro</span>
+              </label>
+            </div>
+          </div>
+  
+          <div class="quiz-question">
+            <div class="quiz-question-number">10</div>
+            <p class="quiz-question-text">Como se manter informado durante uma enchente?</p>
+            <div class="quiz-options">
+              <label class="quiz-option">
+                <input type="radio" name="q10" value="a">
+                <span class="radio-custom"></span>
+                <span class="option-text">Redes sociais apenas</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q10" value="b">
+                <span class="radio-custom"></span>
+                <span class="option-text">TV e rádio oficiais</span>
+              </label>
+              <label class="quiz-option">
+                <input type="radio" name="q10" value="c">
+                <span class="radio-custom"></span>
+                <span class="option-text">Não é necessário se informar</span>
+              </label>
+            </div>
+          </div>
+  
+          <div class="quiz-submit">
+            <button type="submit" class="quiz-submit-btn">
+              🎯 Verificar Respostas
+            </button>
+          </div>
+        </form>
+  
+        <div id="quiz-result" class="quiz-result"></div>
+      </div>
     </div>
-  </div>
-</section>
-
-        
-
-        
+  </section>       
+     
     </main>
 
     <!-- Footer -->
